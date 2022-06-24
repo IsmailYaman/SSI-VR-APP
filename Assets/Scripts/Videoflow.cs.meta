@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: fb2410c9e438f7848b2923b5b61af737
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PhysicsButton: {instanceID: 0}
+  - VideoPlane: {instanceID: 0}
+  - step1Video1: {fileID: 32900000, guid: 10d81076831fc7e4e88cc736711d900b, type: 3}
+  - step1Video2: {fileID: 32900000, guid: 10d81076831fc7e4e88cc736711d900b, type: 3}
+  - step2Video: {fileID: 32900000, guid: 806972201f7bb674f8ca3ecb910cc19c, type: 3}
+  - step3Video1: {fileID: 32900000, guid: ab5e326ac45aa954a959c2ff1f8988f0, type: 3}
+  - step3Video2: {fileID: 32900000, guid: 8398152601a7cce4690e946c760a915f, type: 3}
+  - step3Video3: {fileID: 32900000, guid: 2b6ed783a5d74d94592fdf70038a39d7, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

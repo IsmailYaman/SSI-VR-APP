@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+using UnityEngine.Video;
 
 //test
 
@@ -17,6 +18,22 @@ public class PhysicsButton : MonoBehaviour
 
     public UnityEvent onPressed, onReleased;
 
+    public static bool step1 = true;
+    public static bool step1Left = false;
+    public static bool step1Right = false;
+
+    public static bool step2 = false;
+
+    public static bool step3 = false;
+    public static bool step3Right = false;
+    public static bool step3Middle = false;
+    public static bool step3Left = false;
+
+    public static bool step4 = false;
+    public static bool step5 = false;
+
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +49,8 @@ public class PhysicsButton : MonoBehaviour
             Pressed();
         if(_isPressed && GetValue() - threshold <= 0)
             Released();
+
+        
     }
 
     private float GetValue()
@@ -48,13 +67,62 @@ public class PhysicsButton : MonoBehaviour
     {
         _isPressed = true;
         onPressed.Invoke();
-        Debug.Log("Pressed");
+        //Debug.Log("Pressed");
     }
 
     private void Released()
     {
         _isPressed = false;
         onReleased.Invoke();
-        Debug.Log("Released");
+        //Debug.Log("Released");
     }
+
+    public void LeftButtonClick()
+    {
+
+        if (step1)
+        {
+            Debug.Log("Pressed1");
+            step1 = true;
+
+            step1Left = true;   
+        }
+
+        if (step2)
+        {
+            step3 = true;
+
+            step3Left = true;
+        }
+    }
+
+    public void MiddleButtonClick()
+    {
+        if (step3)
+        {
+            Debug.Log("Pressed2");
+            step3Left = true;
+        }
+    }
+
+    public void RightButtonClick()
+    {
+        if (step1)
+        {
+            Debug.Log("Pressed3");
+            step1 = true;
+
+            step1Right = true;
+        }
+
+        if (step2)
+        {
+            step3 = true;
+
+            step3Left = true;
+        }
+    }
+
+   
+
 }
